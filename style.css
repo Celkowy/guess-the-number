@@ -1,0 +1,239 @@
+@import url('https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #201f20;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  color: white;
+  font-family: 'Press Start 2P', sans-serif;
+}
+
+.modal {
+  display: flex;
+  padding: 10px 15px;
+}
+
+button {
+  font-size: 21px;
+  padding: 15px 20px;
+  margin: 15px;
+  cursor: pointer;
+  width: 215px;
+  height: 65px;
+  font-family: inherit;
+  background-color: white;
+  border: none;
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+.game-view {
+  background-color: #201f20;
+}
+
+.top {
+  width: 100vw;
+  height: 50vh;
+}
+
+.bottom {
+  height: 50vh;
+}
+
+.top-wrap {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  height: 20%;
+}
+
+.mode-info {
+  margin: 15px;
+}
+
+.guess-my-number {
+  text-align: center;
+  font-size: 48px;
+}
+
+.result-wrap {
+  position: relative;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+}
+
+.result {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+  text-align: center;
+  font-size: 42px;
+  color: black;
+  padding: 25px 25px;
+  height: 100px;
+  width: 200px;
+  background-color: #fff;
+  transition: all 0.2s ease-in;
+}
+
+.result-wrap::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100vw;
+  height: 10px;
+  background-color: white;
+  z-index: 0;
+}
+
+.bottom {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+.bottom-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  margin-right: 150px;
+  align-items: center;
+}
+
+.bottom-right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 500px;
+}
+
+.form-check {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+input {
+  border: 3px solid white;
+  background-color: transparent;
+  font-size: 41px;
+  color: white;
+  font-family: inherit;
+  height: 65px;
+  padding: 15px;
+  width: 215px;
+  text-align: center;
+  outline: none;
+}
+
+.guess-my-number-wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  max-height: 80%;
+  min-height: 80%;
+}
+
+.decide {
+  font-size: 28px;
+}
+
+.scores-array {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.scores-array p:last-child {
+  color: orange;
+}
+
+.score-record {
+  margin-right: 15px;
+}
+
+@media (max-width: 600px) {
+  button {
+    font-size: 12px;
+    margin: 15px;
+    width: 125px;
+    height: 55px;
+    font-family: inherit;
+    background-color: white;
+    border: none;
+  }
+
+  .modal-button {
+    width: 150px;
+  }
+
+  .guess-my-number {
+    font-size: 19px;
+  }
+
+  .modal {
+    flex-direction: column;
+  }
+
+  .bottom-right {
+    width: auto;
+  }
+
+  .bottom-left {
+    margin: 0 auto;
+  }
+
+  .decide {
+    font-size: 18px;
+  }
+
+  .tries {
+    font-size: 12px;
+    margin: 15px 0 15px;
+  }
+
+  .guess-my-number {
+    margin-top: 50px;
+    margin-bottom: 25px;
+  }
+
+  .number-input {
+    width: 125px;
+    height: 55px;
+    padding: 10px 15px;
+    font-size: 18px;
+  }
+
+  .mode-info {
+    font-size: 8px;
+  }
+
+  .bottom {
+    flex-direction: column-reverse;
+  }
+
+  .scores-array {
+    text-align: center;
+    height: 32px;
+  }
+
+  .score-record {
+    margin: 0;
+  }
+}
