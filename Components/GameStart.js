@@ -1,4 +1,4 @@
-import { gameStart } from './listeners.js'
+import { gameStart } from './Listeners.js'
 import modeModal from './ModeModal.js'
 
 export default function startingScreen() {
