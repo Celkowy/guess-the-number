@@ -236,4 +236,12 @@ input {
   .score-record {
     margin: 0;
   }
+
+  .form-check {
+    flex-direction: row;
+  }
+
+  .button-check {
+    margin: 0 0 0 15px;
+  }
 }
