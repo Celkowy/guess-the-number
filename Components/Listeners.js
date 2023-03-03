@@ -1,12 +1,11 @@
 import updateInfo from './UpdateInfo.js'
 import checkResult from './CheckResult.js'
 import updateModeInfo from './UpdateModeInfo.js'
-import gameView from './GameView.js'
-import modeSelect from './ModeSelect.js'
+import gameView from '../UI/GameView.js'
 import startingScreen from './GameStart.js'
+import modeSelect from './ModeSelect.js'
 
 let tries = 0
-const wantedNumber = modeSelect()
 
 export function focusOnInput() {
   document.querySelector('.button-check').addEventListener('click', function () {
@@ -21,7 +20,7 @@ export function restart() {
   })
 }
 
-export function formCheck() {
+export function formCheck(wantedNumber) {
   const scoreInput = document.querySelector('.form-check')
 
   scoreInput.addEventListener('submit', function (e) {
@@ -37,11 +36,12 @@ export function formCheck() {
 }
 
 export function gameStart(modalButton, wrapper, gameMode) {
+  const wantedNumber = modeSelect(gameMode)
   modalButton.addEventListener('click', function () {
     wrapper.innerHTML = gameView()
     focusOnInput()
     updateModeInfo(gameMode)
     restart()
-    formCheck()
+    formCheck(wantedNumber)
   })
 }

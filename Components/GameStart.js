@@ -1,5 +1,5 @@
 import { gameStart } from './Listeners.js'
-import modeModal from './ModeModal.js'
+import modeModal from '../UI/ModeModal.js'
 
 export default function startingScreen() {
   const wrapper = document.querySelector('.wrapper')
