@@ -180,11 +180,11 @@ input {
   }
 
   .top {
-    height: 65vh;
+    height: 60vh;
   }
 
   .bottom {
-    height: 35vh;
+    height: 40vh;
     flex-direction: column-reverse;
   }
 
