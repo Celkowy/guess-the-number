@@ -180,11 +180,11 @@ input {
   }
 
   .top {
-    height: 60vh;
+    height: 65vh;
   }
 
   .bottom {
-    height: 40vh;
+    height: 35vh;
   }
 
   .modal-button {
@@ -251,5 +251,9 @@ input {
 
   .button-check {
     margin: 0 0 0 15px;
+  }
+
+  .guess-my-number-wrap {
+    justify-content: space-around;
   }
 }
