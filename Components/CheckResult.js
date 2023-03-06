@@ -9,9 +9,9 @@ export default function checkResult(guess, wantedNumber) {
     document.querySelector('.button-check').disabled = true
     document.querySelector('.number-input').disabled = true
     document.querySelector('.scores-array p:last-child').style.color = 'green'
-  } else if (guess > wantedNumber) {
-    decide.textContent = '👇 Lower'
-  } else if (guess < wantedNumber) {
-    decide.textContent = '☝ Higher'
+  }
+
+  if (guess !== wantedNumber) {
+    guess > wantedNumber ? (decide.textContent = '👇 Lower') : (decide.textContent = '☝ Higher')
   }
 }
